@@ -2,20 +2,23 @@ manifest:
   defaults:
     revision: v0.3
   remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
     - name: homerowkb
       url-base: https://github.com/homerowkb
   projects:
     - name: zmk
+      remote: zmkfirmware
+      import: app/west.yml
+    - name: zmk-homerow
+      repo-path: zmk
       remote: homerowkb
       revision: enrico/add-multiprofile-support
-      import:
-        - app/west.yml
-        - app/CMakeLists.txt
-        - app/include/dt-bindings/zmk/profile.h
-        - app/include/zmk/keymap.h
-        - app/src/behaviors/behavior_profile.c
-        - app/src/keymap.c
-        - app/src/studio/keymap_subsystem.c
+    - name: zmk-studio-messages-homerow
+      repo-path: zmk-studio-messages
+      revision: enrico/add-multiprofile-support
+      path: modules/msgs/zmk-studio-messages
+      remote: homerowkb
     - name: zmk-keyboard-radiata
       remote: homerowkb
       revision: main
