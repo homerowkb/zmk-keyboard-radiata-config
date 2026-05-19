@@ -2,20 +2,14 @@ manifest:
   defaults:
     revision: v0.3
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
     - name: homerowkb
       url-base: https://github.com/homerowkb
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
-    - name: zmk
-      remote: zmkfirmware
-      import: app/west.yml
     - name: zmk
       remote: homerowkb
       revision: enrico/add-multiprofile-support
       import:
+        - app/west.yml
         - app/CMakeLists.txt
         - app/include/dt-bindings/zmk/profile.h
         - app/include/zmk/keymap.h
