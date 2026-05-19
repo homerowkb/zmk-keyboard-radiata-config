@@ -6,6 +6,7 @@ manifest:
       url-base: https://github.com/homerowkb
   projects:
     - name: zmk-homerow
+      path: zmk
       repo-path: zmk
       remote: homerowkb
       revision: enrico/add-multiprofile-support
