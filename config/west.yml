@@ -12,6 +12,9 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    - name: zmk
+      remote: homerowkb
+      revision: main
     - name: zmk-keyboard-radiata
       remote: homerowkb
       revision: main
