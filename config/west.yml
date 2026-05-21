@@ -9,10 +9,10 @@ manifest:
       path: zmk
       repo-path: zmk
       remote: homerowkb
-      revision: main
+      revision: enrico/add-multiprofile-support
       import: app/west.yml
     - name: zmk-keyboard-radiata
       remote: homerowkb
-      revision: main
+      revision: conversion-from-v1-to-v2
   self:
     path: config
